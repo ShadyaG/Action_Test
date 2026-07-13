@@ -4,27 +4,26 @@ on:
   push:
     branches:
       - main
-      - master # Added just in case your default branch is named master
+      - master
+
+# 🔐 ICI : On dit au runner de tolérer le certificat du réseau d'entreprise
+env:
+  NODE_TLS_REJECT_UNAUTHORIZED: "0"
 
 jobs:
   run-qa-batch:
-    # ⚠️ CRITICAL: This tells GitHub to use your VDI instead of the cloud
     runs-on: self-hosted
-
     steps:
       - name: 📥 Checkout repository
         uses: actions/checkout@v4
 
       - name: 🚀 Run QA_launcher.bat
-        # Executes the hybrid batch file. 
-        # 'shell: cmd' ensures it runs exactly like the Windows command prompt.
         run: .\QA_launcher.bat
         shell: cmd
 
       - name: 📦 Upload Reports (Artifacts)
-        # This step packages the results folder so you can download it from GitHub.
         uses: actions/upload-artifact@v4
-        if: always() # Ensures reports/logs are uploaded even if the Python script crashes
+        if: always()
         with:
           name: qa-reports-${{ github.run_id }}
           path: .\_results\
