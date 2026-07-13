@@ -14,7 +14,7 @@ if "%GITHUB_ACTIONS%"=="true" (
 :: 3. Configure paths (Uses repo files for CI, Q: drive for local manual runs)
 if "%CI_MODE%"=="true" (
     set "PYTHON64=Q:\tiles\60_QA\conda\envs\nxgm-py3\python.exe"
-    set "DEFAULT_PATH=.\_results"
+    set "DEFAULT_PATH=Q:\tiles\35_sandbox\QA_VT\_results"
     set "SCRIPT_PATH=.\QA_VT_batch.py"
 ) else (
     set "PYTHON64=Q:\tiles\60_QA\conda\envs\nxgm-py3\python.exe"
