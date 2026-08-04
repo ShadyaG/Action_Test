@@ -5,8 +5,6 @@ on:
     branches:
       - main
       - master
-
-# 🔐 ICI : On dit au runner de tolérer le certificat du réseau d'entreprise
 env:
   NODE_TLS_REJECT_UNAUTHORIZED: "0"
   PYTHONIOENCODING: "utf-8"
@@ -15,14 +13,14 @@ jobs:
   run-qa-batch:
     runs-on: self-hosted
     steps:
-      - name: 📥 Checkout repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: 🚀 Run QA_launcher.bat
+      - name: Run QA_launcher.bat
         run: .\QA_launcher.bat
         shell: cmd
 
-      - name: 📦 Upload Reports (Artifacts)
+      - name: Upload Reports (Artifacts)
         uses: actions/upload-artifact@v4
         if: always()
         with:
