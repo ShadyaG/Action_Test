@@ -7,7 +7,7 @@
   "targets": {
     ".NETCoreApp,Version=v8.0": {},
     ".NETCoreApp,Version=v8.0/win-x64": {
-      "Runner.Common/2.335.1": {
+      "Runner.Common/2.336.0": {
         "dependencies": {
           "Microsoft.Win32.Registry": "5.0.0",
           "Newtonsoft.Json": "13.0.3",
@@ -989,7 +989,7 @@
         "runtime": {
           "Runner.Sdk.dll": {
             "assemblyVersion": "1.0.0",
-            "fileVersion": "2.335.1.0"
+            "fileVersion": "2.336.0.0"
           }
         }
       },
@@ -1012,14 +1012,14 @@
         "runtime": {
           "Sdk.dll": {
             "assemblyVersion": "1.0.0",
-            "fileVersion": "2.335.1.0"
+            "fileVersion": "2.336.0.0"
           }
         }
       }
     }
   },
   "libraries": {
-    "Runner.Common/2.335.1": {
+    "Runner.Common/2.336.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -7,7 +7,7 @@
   "targets": {
     ".NETCoreApp,Version=v8.0": {},
     ".NETCoreApp,Version=v8.0/win-x64": {
-      "Sdk/2.335.1": {
+      "Sdk/2.336.0": {
         "dependencies": {
           "Azure.Storage.Blobs": "12.27.0",
           "Microsoft.AspNet.WebApi.Client": "6.0.0",
@@ -972,7 +972,7 @@
     }
   },
   "libraries": {
-    "Sdk/2.335.1": {
+    "Sdk/2.336.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
